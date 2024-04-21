@@ -1,0 +1,103 @@
+:root {
+    --color-primary: #D73953;
+}
+
+.menu-open {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+.menu-line{
+    display: block;
+    width: 2rem;
+    height: .2rem;
+    background-color: white;
+
+}
+
+
+ .menu-open-button{
+    background-color: var(--color-primary);
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 2.5rem;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+ .menu-item {
+    background-color: var(--color-primary);
+    width: 5rem;
+    height: 5rem;
+    display: none;
+    border-radius: 2.5rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.menu-item:hover,  .menu-open-button:hover {
+    background-color: white;
+    transition: .3s;
+    border: 3px solid var(--color-primary);
+}
+
+
+/* //this will target first a and all a that exist below it */
+.menu-open-button + a, 
+.menu-open-button ~ a {
+    margin-top: 1rem;
+}
+
+.fa{
+    color: white;
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+/* this tagets the 3 menu bar icon changes to color */
+.menu-open:hover ~ .menu-open-button .menu-line {
+    background-color: var(--color-primary)
+
+}
+
+.menu-open:checked ~ .menu-open-button > .menu-line-3 {
+    display: none;
+  }
+  
+  .menu-open:checked ~ .menu-open-button > .menu-line-1 {
+    transform: rotate(45deg);
+    margin-top: 4.5px;
+    transition: 0.1s ease-out;
+  }
+  
+  .menu-open:checked ~ .menu-open-button > .menu-line-2 {
+    transform: rotate(-45deg);
+    margin-top: -10.5px;
+    transition: 0.1s ease-out;
+  }
+
+  .menu-open:checked ~ .menu-open-button,
+  .menu-open:checked ~ .menu-item{
+    width: 5rem;
+    height: 5rem;
+  }
+  
+
+/* this tagets the fa menu bar icon changes to color */
+ .menu-item:hover  .fa {
+    color: var(--color-primary)
+
+}
+
+.menu-open:checked ~ .menu-item {
+    opacity: 1;
+    display: flex;
+    animation:  1s steps(2) forwards; /* Apply the animation */
+}
+
+

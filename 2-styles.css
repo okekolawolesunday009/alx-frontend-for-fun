@@ -1,0 +1,78 @@
+.toggle-label .toggle-inner{
+    width: 150px;
+    height: 70px;
+    display: block;
+    border-radius: 150px;
+    background-color: rgb(235, 232, 232);
+    border:  4px solid rgb(212, 211, 211);
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    font-size: 3rem;
+    color: gray;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+
+}
+.toggle-label{
+    position: relative;
+}
+.toggle-label .toggle-switch{
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 4px solid gray;
+    top:0;
+    left: 1;
+    border-radius: 200px;
+   
+
+}
+
+.toggle-cb:checked + .toggle-label .toggle-switch {
+    left: calc(10% - 40px); /* Move the switch to the right */
+    animation-name: move;
+    animation-duration: 0.3s;
+}
+.toggle-cb:not(:checked) + .toggle-label .toggle-switch {
+    animation-name: move;
+    animation-duration: 0.3s;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-inner:after {
+    content: "Yes";
+    font-size: inherit;
+
+}
+
+.toggle-cb:not(:checked) +  .toggle-label .toggle-inner::after {
+    content: "No";
+    font-size: inherit;
+    animation-name: move-text
+
+}
+
+.toggle-cb:checked + .toggle-label .toggle-inner {
+    background-color: red;
+
+}
+
+.toggle-cb:not(:checked) + .toggle-label .toggle-inner {
+    justify-content: flex-end;
+}
+
+
+
+
+@keyframes move {
+    from { left: 0;  }
+    to { left: calc(10% - 40px); } /* Move to the right edge of the parent container */
+}
+
+@keyframes move-text {
+    from { opacity: 0;  }
+    to { opacity: 1;  } /* Move to the right edge of the parent container */
+}
