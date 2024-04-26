@@ -1,0 +1,20 @@
+@mixin Text($color) {
+    color:  $color; 
+    
+ }
+
+ .info {
+
+    @extend .info
+
+ }
+ 
+ .success{
+     @include Text("#00FF00");
+    @extend .info
+ }
+ .warning{
+     @include Text("#FF0000");
+    @extend .info
+ }
+

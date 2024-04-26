@@ -100,4 +100,13 @@ a {
     animation:  1s steps(2) forwards; /* Apply the animation */
 }
 
+.menu {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: rgb(160, 167, 148); */
+}
+
 

@@ -1,0 +1,9 @@
+$primary-color: #3D3D3D ;
+$primary-backgroundColor:#6D6D6D;
+
+body, p {
+    color: $primary-color;
+}
+body, h2 {
+    background-color: $primary-backgroundColor;
+}
