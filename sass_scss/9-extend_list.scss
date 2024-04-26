@@ -5,13 +5,13 @@
 
  .info {
 
-    @extend .info
+    font-size: 12px;
 
  }
  
  .success{
      @include Text("#00FF00");
-    @extend .info
+     @extend .info;
  }
  .warning{
      @include Text("#FF0000");
