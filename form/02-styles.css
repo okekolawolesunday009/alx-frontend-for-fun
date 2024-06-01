@@ -668,6 +668,7 @@
         margin: 0;
     }
     fieldset {
+        display:flex;
         flex-direction:column;
         justify-content: flex-start;
         border: none;
